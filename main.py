@@ -9,11 +9,13 @@ def homepage():
 
 @app.route("/result", methods=["POST"])
 def result():
-    u_input = request.form.get("num")
-    if not u_input:
-        return redirect("/")
-    number = fb(int(u_input))
-    return render_template("result.html", fib_num = number, usr_input = u_input)
+    u_input1 = request.form.get("num1")
+   u_input2 = request.form.get("num1")    
+   u_input3 = request.form.get("num1")  
+    u_input4 = request.form.get("num1")   
+    u_input5 = request.form.get("num1")   
+    number = odd_sum(int(u_input1),int(u_input2),int(u_input3),int(u_input4),int(u_input5))
+    return render_template("result.html", fib_num = number, usr_input = u_input1)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
