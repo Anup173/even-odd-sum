@@ -10,9 +10,10 @@ def homepage():
 @app.route("/result", methods=["POST"])
 def result():
     u_input1 = request.form.get("num1")
+    u2=request.form.get("num2)
 
-    number = odd_sum(int(i-input1))
-    return render_template("result.html", fib_num = number, usr_input = u_input1)
+    number = sum(int(u_input1),int(u2))
+    return render_template("result.html", sum_ = number, usr_input = u_input1)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
