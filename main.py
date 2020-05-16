@@ -10,11 +10,8 @@ def homepage():
 @app.route("/result", methods=["POST"])
 def result():
     u_input1 = request.form.get("num1")
-   u_input2 = request.form.get("num1")    
-   u_input3 = request.form.get("num1")  
-    u_input4 = request.form.get("num1")   
-    u_input5 = request.form.get("num1")   
-    number = odd_sum(int(u_input1),int(u_input2),int(u_input3),int(u_input4),int(u_input5))
+
+    number = odd_sum(int(i-input1))
     return render_template("result.html", fib_num = number, usr_input = u_input1)
 
 if __name__ == '__main__':
